@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reading user account balance</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin: 2rem auto;
+            border: 2px solid red;
+            height:200px;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        #balance-container{
+            border:2px solid red;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <label for="api-key">API Key:</label>
+            <input type="text" id="api-key">
+        </div>
+        <div>
+            <label for="secret-key">Secret Key:</label>
+            <input type="text" id="secret-key">
+        </div>
+        <div>
+            <button onclick="saveKeys()">Save Keys</button>
+        </div>
+        
+        
+        
+    </div>
+  
+  
+
+  <div id="balance-container"></div>
+  <div>
+    <button onclick="clearKeys()">Clear Keys</button>
+  </div>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
